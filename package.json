@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "client": "yarn --cwd websocket-client run start",
+    "build": "yarn --cwd websocket-client run build",
     "server": "yarn --cwd websocket-server run start",
     "start": "concurrently \" yarn run client \"  \" yarn run server \""
   },
