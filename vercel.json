@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "websocket-server/index.ts",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "websocket-client/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "websocket-client/build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "websocket-server/index.ts"
+    }
+  ]
+}

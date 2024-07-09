@@ -1,0 +1,16 @@
+{
+  "name": "socket-chat",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "client": "yarn --cwd websocket-client run start",
+    "server": "yarn --cwd websocket-server run start",
+    "start": "concurrently \" yarn run client \"  \" yarn run server \""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
