@@ -16,7 +16,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "websocket-server/index.ts"
+      "dest": "websocket-client/build/$1"
     }
   ]
 }
