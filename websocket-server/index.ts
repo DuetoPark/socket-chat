@@ -18,11 +18,11 @@ const app = express();
 app.use(cors({ origin: clientUrl }));
 
 // 정적 파일 서빙 설정(React 연동)
-app.use(express.static(path.join(__dirname, "../../websocket-client/build")));
+app.use(express.static(path.join(__dirname, "websocket-client/build")));
 
 // Express.js 서버에서 특정 경로로 요청이 들어왔을 때, 해당 경로에 대응하는 HTML 파일을 클라이언트에게 보내줌
-app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "../../websocket-client/build/index.html"));
+app.get("/websocket-client", function (req, res) {
+  res.sendFile(path.join(__dirname, "websocket-client/build/index.html"));
 });
 
 // http 서버 생성. 명시적으로 호출.
