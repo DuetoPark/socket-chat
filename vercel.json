@@ -1,12 +1,11 @@
 {
   "version": 2,
-  "name": "socket-chat",
   "builds": [
     {
       "src": "websocket-client/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "outputDirectory": "websocket-client/build"
+        "distDir": "websocket-client/build"
       }
     },
     {
@@ -16,12 +15,12 @@
   ],
   "routes": [
     {
-      "src": "/websocket-server/(.*)",
-      "dest": "/websocket-server/index.ts"
+      "src": "/api/(.*)",
+      "dest": "websocket-server/index.ts"
     },
     {
       "src": "/(.*)",
-      "dest": "/websocket-client/build/$1"
+      "dest": "websocket-client/build/$1"
     }
   ]
 }
