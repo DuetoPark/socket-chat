@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "name": "socket-chat",
   "builds": [
     {
       "src": "websocket-client/package.json",
@@ -14,6 +15,10 @@
     }
   ],
   "routes": [
+    {
+      "src": "/websocket-server/(.*)",
+      "dest": "/websocket-server/index.ts"
+    },
     {
       "src": "/(.*)",
       "dest": "websocket-client/build/$1"
