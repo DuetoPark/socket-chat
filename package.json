@@ -5,6 +5,7 @@
   "scripts": {
     "client": "yarn --cwd websocket-client run start",
     "server": "yarn --cwd websocket-server run start",
+    "build": "yarn --cwd websocket-client run build",
     "start": "concurrently \" yarn run client \"  \" yarn run server \""
   },
   "keywords": [],
