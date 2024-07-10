@@ -23,5 +23,11 @@
       "src": "/(.*)",
       "dest": "/websocket-client/build/$1"
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/websocket-client/build/index.html"
+    }
   ]
 }
