@@ -21,7 +21,7 @@ app.use(cors({ origin: clientUrl }));
 app.use(express.static(path.join(__dirname, "websocket-client/build")));
 
 // Express.js 서버에서 특정 경로로 요청이 들어왔을 때, 해당 경로에 대응하는 HTML 파일을 클라이언트에게 보내줌
-app.get("/websocket-client", function (req, res) {
+app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "websocket-client/build/index.html"));
 });
 
