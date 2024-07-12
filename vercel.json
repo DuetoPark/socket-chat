@@ -5,7 +5,7 @@
       "src": "websocket-client/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "outputDirectory": "websocket-client/build"
+        "outputDirectory": "build"
       }
     },
     {
