@@ -6,6 +6,7 @@ import AirController from "./components/AirController";
 const App: React.FC = () => {
   return (
     <div className="App">
+      나와라 얍
       <AirController />
       <Talk />
     </div>
